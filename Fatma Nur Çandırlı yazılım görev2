@@ -1,0 +1,787 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "3ca9f361-e02d-41e9-8f43-05feefcefb24",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Python kullanım alanları: yazılım,veri bilimi,web tasarımı.Diğer dillere göre daha kolay ve kullanışlıdır çünkü az karakterle komut verilebilir.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "5959aa42-e450-4ad6-ab0c-9d0b7444e3c9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Merhaba \n",
+      "Fatma Nur\n",
+      "Merhaba \tFatma Nur\n"
+     ]
+    }
+   ],
+   "source": [
+    "# \\n ifadesi print komutunda yeni satıra geçer , \\t ifadesi ise arada boşluk bırakır.Örnekler aşağıdadır.\n",
+    "print('Merhaba \\nFatma Nur')\n",
+    "print('Merhaba \\tFatma Nur')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "c0f42f15-da32-4143-9492-b234a92e3b8b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Merhaba Fatma Nur\n",
+      "Merhaba Fatma nur , bugün nasılsın\n",
+      "Merhaba Fatma Nur , bugün Nasılsın\n"
+     ]
+    }
+   ],
+   "source": [
+    "# .format komutuyla değişken atayarak satırı dilediğimiz gibi yazdırabiliriz.Süslü parantez kullanarak.\n",
+    "print('Merhaba {}'.format('Fatma Nur'))\n",
+    "\n",
+    "# Burada format içine ne yazarsak ekrana o yazdırılır.\n",
+    "# index ise format içerisindeki elemanların sırasıdır,index sıfırdan başlar.Örnek aşağıdadır.\n",
+    "print('Merhaba {0} , bugün {1}'.format('Fatma nur','nasılsın'))\n",
+    "\n",
+    "# Format değişkenlerine atama yapmak en doğru yöntemdir.\n",
+    "print('Merhaba {ad} , bugün {durum}'.format(ad='Fatma Nur', durum='Nasılsın'))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "3d2553cf-0bdc-49f3-8402-a44748f2232d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "11\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Değişkenler sonradan başka değerler atanabilen kavramlardır.Bir referansa göre kendi değerini güncelleyebilirler.\n",
+    "\n",
+    "sayi=10\n",
+    "print(sayi)\n",
+    "sayi=sayi+1\n",
+    "print(sayi)\n",
+    "\n",
+    "# Değişkenin başına sayı koyulmaz ve arasında boşluk bırakılmaz.Bunun yerine alt çizgi kullanılabilir.\n",
+    "# Ayrıca değişken içerisinde pythonda anlamı olan semboller kullanılmaz.Toplama,çıkarma,çarpma gibi.\n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "4ccc7a7f-90d7-47de-acbb-24b1cf021f2a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Veri tipleri ve kısaltmaları aşağıdadır.\n",
+    "#İnteger int tam sayılar 3  \n",
+    "#Float float ondalıklı sayılar 1.5\n",
+    "#String str yazı 'selam'\n",
+    "#Boolean bool doğru veya yanlış True , False\n",
+    "#List list farklı veri tiplerini içerebilirler [1,2,True,'A',1]\n",
+    "#Set set farklı veri tiplerini içerebilirler fakat listten farklı olarak tekrar eden elemanları bir defa sayar {1,2,True,'A'}\n",
+    "#Dictionary dict bir objenin farklı boyutlarına ulaşmayı sağlar {'isim':Fatma nur , 'yaş':19}\n",
+    "#Tuple tup değiştirilemeyen listelerdir (1,2,True)\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "fb8d13e7-865e-4554-aa17-5b934807dde0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "int"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "d6b64d37-ea32-4b66-95b1-117991cc35f9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "float"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(2.5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "b2ae7ce6-7db1-4806-9b98-114f2fc588c4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Fatma\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'m'"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "strvar= \"Fatma\"\n",
+    "print(strvar)\n",
+    "\n",
+    "#Köşeli parantezle index bulunur.\n",
+    "##[] tek bir eleman alınır.\n",
+    "###[:] başlangıç ve bitiş arasındaki elemanlar alınır.\n",
+    "####[::] başlangıç ve bitiş arasındaki elemanlar üçüncü kısımdaki değere göre atlyarak alınır.\n",
+    "\n",
+    "strvar[3]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "33049f30-cb7c-4221-8cfe-6bc03a7a5369",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'atm'"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "strvar[1:4]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "92d3f1da-161a-49de-9168-81e346f2989a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'F'"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "strvar[0:2:5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "8888df79-a39e-411f-9a27-0154190aa009",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#len fonksiyonu karakterin uzunluğunu bulmaya yarar.\n",
+    "len(strvar)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "a4eead20-795a-4582-9590-630a3f5e45d4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Fatmanur nur'"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "strvar = strvar + \" nur\"\n",
+    "strvar"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "id": "e0d4d14d-fdf9-4e37-9de1-eb4c25540561",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'FATMANUR NUR'"
+      ]
+     },
+     "execution_count": 57,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#upper ile büyük harf yaparız.\n",
+    "strvar.upper()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "67751bd3-e6e3-4bb0-ae20-449c72064aa8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Fatmanur nurFatmanur nurFatmanur nur'"
+      ]
+     },
+     "execution_count": 56,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "strvar *  3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "9151e2f1-3d08-4ab9-9b7a-9f2f9ea0b2da",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'fatmanur nur'"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#lower ile küçük harf yaaparız.\n",
+    "strvar.lower()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "5cd2a74c-b6a5-4b59-9635-41b5f06f698a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Fatmanur', 'nur']"
+      ]
+     },
+     "execution_count": 59,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#split ile karakter elemanlara ayrılır.\n",
+    "strvar.split()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "57da465f-b77b-458c-b541-a170cf1f1d04",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Fa', 'manur nur']"
+      ]
+     },
+     "execution_count": 61,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#t'den itibaren ayırmak istedim.\n",
+    "strvar.split(\"t\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "id": "d584e89e-44fa-47ae-aa25-0dc179f850ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "yas1=18\n",
+    "print(yas1 > 18 )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "f9dcbb77-ce13-4846-9d69-d84688b8f6ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 64,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# == eşit mi demektir \n",
+    "yas1 == 18"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "955c98da-357f-4851-840f-b2065bedcb75",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 65,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#!= eşit değil mi demektir\n",
+    "yas1 != 18"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "7c0785fd-4e17-47c2-8fb1-20f9df1b0a2e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 66,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#ifadenin tersini almak için not kullanılır\n",
+    "not yas1==18"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "84798cce-ab84-4b1e-a795-2cb3298d48d6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['a', 'b', 'c']\n"
+     ]
+    }
+   ],
+   "source": [
+    "liste=['a','b','c']\n",
+    "print(liste)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "643a8f6c-146b-4971-afa4-f441e4ee1935",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['a', 'b', 'c', 'd']"
+      ]
+     },
+     "execution_count": 68,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "liste= liste + ['d']\n",
+    "liste"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "id": "8d52d320-26d3-4354-9fb1-f044b0a5a246",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'a'"
+      ]
+     },
+     "execution_count": 69,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "liste[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "id": "b08f6e7c-e4f8-4508-a7e7-e495d13d34c9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['a', 'b', 'c', 'd', 'e', 'e']"
+      ]
+     },
+     "execution_count": 71,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "liste.append('e')\n",
+    "liste"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "id": "9ed91961-e68e-4ba3-9e4b-0034966e8b75",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['a', 'b', 'c', 'd', 'e']"
+      ]
+     },
+     "execution_count": 72,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "liste.pop(5)\n",
+    "liste"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "f10f156c-a5eb-4f2e-a79f-405eecd8a6d3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('a', 'b', 'c')\n"
+     ]
+    }
+   ],
+   "source": [
+    "tup=('a','b','c')\n",
+    "print(tup)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "id": "dd70a824-a861-4ea6-83d6-77c694ca0b75",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 74,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tup.index('b')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eec3e7a1-be18-4e9c-b0a7-f2eed93db96c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#tup,içerisindeki elemanların değiştirilmesine veya olmayan bir elemanın indexinin sorgulanmasına izin vermez.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "id": "dcefaaf9-95de-4605-b023-9d6c8b5f7fbf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'isim': 'Fatma nur', 'yaş': 19, 'şehir': 'Ankara'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "#dict ifadesi ile ilgili çalışmalar aşağıdadır.\n",
+    "\n",
+    "dict={'isim': 'Fatma nur',\n",
+    "      'yaş' : 19,\n",
+    "      \n",
+    "'şehir' : 'Ankara'\n",
+    "}\n",
+    "print(dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "id": "c4e327d7-e8e3-4a61-9348-2aac7ec15f26",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "19"
+      ]
+     },
+     "execution_count": 83,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict['yaş']\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "id": "44f17d7c-07da-40e0-b9c0-c6d0ce956652",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Ankara'"
+      ]
+     },
+     "execution_count": 84,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict.get('şehir')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "4285c033-ea66-44d3-88ab-a22f99db6912",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_values(['Fatma nur', 19, 'Ankara'])"
+      ]
+     },
+     "execution_count": 85,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict.values()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "id": "8f3e30b2-1c1d-4323-aa9c-92532eb83e90",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys(['isim', 'yaş', 'şehir'])"
+      ]
+     },
+     "execution_count": 86,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict.keys()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "id": "95ef6b3a-765c-4d27-8cd7-7e06fbd41e7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_items([('isim', 'Fatma nur'), ('yaş', 19), ('şehir', 'Ankara')])"
+      ]
+     },
+     "execution_count": 87,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dict.items()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7a084f7c-baa8-4c59-8395-1794bb13bf2e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
